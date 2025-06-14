@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: lavender;
+        }
+
+        header{
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        a{
+            text-decoration: none;
+            color: var(--extra-light);
+            font-size: 1rem;
+        }
+
+        nav ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li{
+            display: none;
+            margin-left: 50px;
+        }
+
+        nav a{
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .contact{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        #contact-form{
+            width: 50%;
+            margin-bottom: 20px;
+        }
+
+        label{
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input, textarea{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+        
+        button[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button[type="submit"]:hover{
+            background-color: #555;
+        }
+
+        .contact-info{
+            margin-top: 20px;
+        }
+
+        footer{
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Me</h1>
+        <nav>
+            <ul>
+                <li><a href="">info</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contact">
+            <h2>Get in Touch</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p> © 2025 Fatima - Powered by Modern Web Standards </p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('contact-form');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            //Send form data to server or email//
+            console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
+
+            //Clear form fields//
+            form.reset();
+
+            //Display success message//
+            alert('Message sent successfully!')
+        })
+    </script>
+</body>
+</html>

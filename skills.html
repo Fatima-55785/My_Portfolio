@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <style>
+        body{
+            font-family: Arial,sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header{
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .skills{
+            display: grid;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .skill-category{
+            background-color: #f7f7f7;
+            margin: 1rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 10spx;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-category h2{
+            margin-top: 0;
+        }
+
+        .skill-category ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skill-category li{
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-category li::before{
+            content: "\2022";
+            margin-right: 0.5rem;
+        }
+       
+        footer{
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            clear: both;
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <h1>Skills</h1>
+    </header>
+    <section class="skills">
+        <div class="skill-category">
+            <h2>Programming Language</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+        <div class="skill-category">
+            <h2>Front-end Development</h2>
+            <ul>
+                <li>React</li>
+                <li>Angular</li>
+            </ul>
+        </div>
+        <div class="skill-category">
+            <h2>Basic Computer</h2>
+            <ul>
+                <li>Basic Editing</li>
+                <li>Microsoft Office</li>
+                <li>Typing</li>
+                <li>File Management</li>
+            </ul>
+        </div>
+        <div class="skill-category">
+            <h2>Communication</h2>
+            <ul>
+                <li>English</li>
+                <li>Urdu</li>
+                <li>Sindhi</li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <p> © 2025 Fatima - Powered by Modern Web Standards </p>
+    </footer>
+</body>
+</html>
